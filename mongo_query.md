@@ -1,3 +1,56 @@
+# Query and Projection Operators
+### Comparison
+### $eq
+```
+value uske equal  ho to.
+```
+### $gt 
+```
+value uske greterthan
+```
+### $gte
+```
+value uske greterthan equal ho to.
+```
+### $in
+```
+value us array ke ander h to return kr dega .
+```
+### $lt
+```
+values de gi value se km ya lessthan h to.
+```
+### $lte
+```
+value de gi values koi km ya barar h to .
+```
+### $ne
+```
+value di gi values k not equal h nhi hone chaiy.
+```
+### $nin
+```
+not in yani us array ke andr nhi hone chaiy.
+```
+# Logical
+### $and
+```
+di gi query me dono condition true ho jati h to query ke sare documents return kr degi or ak bhi glt ho gi to kuch
+return nhi kregi
+```
+### $or
+```
+di gi query me ak bhi condition true h to query ke sare documents return kr gi  nhi kuch bhi return nhi kregi 
+```
+### $not 
+```
+di gi query us condiition nhi mile chay y query returns documents that do not match the query . 
+```
+### $nor
+```
+Joins query clauses with a logical NOR returns all documents that fail to match both clauses.
+```
+
 # field update operators 
 ### $inc 
 
