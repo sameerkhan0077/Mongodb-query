@@ -50,7 +50,54 @@ di gi query us condiition nhi mile chay y query returns documents that do not ma
 ```
 Joins query clauses with a logical NOR returns all documents that fail to match both clauses.
 ```
+# Update Operators
+### field 
+### $min
+min operator agr koi value min se km h to use update kr ke min kr dega agr use jada h to update nhi krega
+```
+db.nodejs.updateOne( { _id: 5 }, { $min: { lowScore: 150 } } );
 
+db.nodejs.updateOne( { _id: 5 }, { $min: { lowScore: 230 } } ) not update
+```
+### max
+agr di gi value max se jada h to value ko update kr dega nhi to use update nhi krega .
+```
+db.nodejs.updateOne( { _id: 5 }, { $max: { highScore: 150 } } ) not update
+
+db.nodejs.updateOne( { _id: 5 }, { $max: { highScore: 230 } } )
+```
+### mul
+agr kisi value ko multiple krvala ho to iska use me lete h 
+```sql
+db.wecodeacademy.updateOne(
+ { _id: 15 },{ $mul:{lowScore: 2}}); 
+ 
+ db.wecodeacademy.updateOne(
+ { _id: 15 },{ $mul:{lowScore: 10}}); 
+ 
+ ```
+ isme phle filed  ka name fir jese multiple krna h use dete h.
+ 
+ ### $rename
+yh filed ka name change krne k ly use kiya jata h
+```
+db.nodejs.updateOne(
+   { _id: 5 },
+   { $rename: { 'highScore': 'myScore', 'lowScore': 'herScore' } }
+);
+```
+### $set
+isme agr koi value h to use chnge kr  dega agr nhi h to use add kr dega 
+```sql
+db.wecodeacademy.updateOne(
+  { _id: 16 },
+  { $set:
+  {
+highScore:1000,lowScore:50,fee:3200
+  }
+}
+);
+```
 # field update operators 
 ### $inc 
 
