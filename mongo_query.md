@@ -38,10 +38,13 @@ db.student.find({ _id: 16 }, { grades: { $slice: 2 } });
 ```
 ### $addToSet
 ```sql
-addtoSet value ko add krta h or set krta h agr value h to add nhi krega agr value nhi h to use add kr ke set kr dega
+addtoSet value ko add krta h or set krta h agr value h to add nhi krega agr value nhi h to use add kr ke set kr dega.
+
 db.student.updateOne({ _id: 12 }, { $addToSet: { grades : 26 } });
-```
+
 y id 12 me grades 26 ko add kr dega last me
+```
+
 
 # $pop
 ```sql
