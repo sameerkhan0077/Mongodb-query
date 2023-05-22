@@ -46,13 +46,39 @@ y id 12 me grades 26 ko add kr dega last me
 ```
 
 
-# $pop
+### $pop
 ```sql
 y value ko us  array se remove krta h agr hm -1 me dete h to aage se krta h or 1 dete h piche se remove krta h.
 
 db.student.updateOne({ _id: 17 }, { $pop: { grades: -1 } });
 db.student.updateOne({ _id: 17 }, { $pop: { grades: 1 } });(piche se)
 ```
+### $pull 
+```sql 
+ y hai value ko remove krne k ly use hota h agr value h to remove kr dega or nhih to remove nhi krega 
+ 
+ db.student.updateOne({ _id: 11 }, { $pull: { grades: 70 } });
+ db.nodejs.updateOne({ _id: 9 }, { $pull: { grades: { $gt: 85 } } });
+ 
+ ```
+### $.
+```sql
+$ ka use kese value ko update krne k ly use kiya jata h value ko change krne k ly kiya  jata h 
 
+db.student.updateOne(
+   { _id: 15, grades: 'sameer' },
+   { $set: { "grades.$" : 'b.khan' } }
+)
+"sammer" ki jagh "b.khan" change kr diya is me id ke pass jis filed ko chnge krna h usko diya jata h ko $set ko bhi use kiya jata h.
+```
+### $unset 
+```sql
+yh jo value add hoti h usko htane k ly use me liya jata h 
 
+db.student.updateOne(
+  { _id : 4 },
+  { $unset: { highscore: ""} }
+);
 
+isme jise filed ko htana h use ke aage "" lga k hta skte h 
+```
