@@ -29,6 +29,8 @@ db.batches.insertMany([
   ```
 
 ### 2. marks array me se sirf vhi marks rkhne hain jo 60+= hain. baki sbko remove krdo
+```sql
+```
 ### 3. marks array me starting se 3rd index se 5 new marks add krne hai 
  ```sql
  db.batches.updateMany(
