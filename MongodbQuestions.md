@@ -23,15 +23,14 @@ db.batches.insertMany([
     duration : 5, fees: 12000, marks : [35,45,55,60,]}]);
   ```
       ### 1. Vo sare batches ke naam btao jinke student ke marks 50% se kam hai
-     ```sql
+  ```sql
      db.batches.find(
   { marks: {$elemMatch: {$lt: 50} } });
-
-     ```
+  ```
 
 ### 2. marks array me se sirf vhi marks rkhne hain jo 60+= hain. baki sbko remove krdo
 ### 3. marks array me starting se 3rd index se 5 new marks add krne hai 
- ```
+ ```sql
  db.batches.updateMany(
     {},
    {
