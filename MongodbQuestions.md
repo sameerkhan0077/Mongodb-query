@@ -22,7 +22,7 @@ db.batches.insertMany([
     {batchName : "Javascript", student : ["jawed khan", "rasid khan", "frman khan", "sam khan"],
     duration : 5, fees: 12000, marks : [35,45,55,60,]}]);
   ```
-      ### 1. Vo sare batches ke naam btao jinke student ke marks 50% se kam hai
+ ### 1. Vo sare batches ke naam btao jinke student ke marks 50% se kam hai
   ```sql
      db.batches.find(
   { marks: {$elemMatch: {$lt: 50} } });
