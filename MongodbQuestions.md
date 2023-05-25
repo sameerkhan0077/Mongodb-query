@@ -92,8 +92,7 @@ db.batches.updateMany(
  ```sql
 
 db.batches.updateMany({},
-  {  marks: { $max: 99 } },
-  { $set: { "marks.$[]": 99 } }
+  {  $max: { marks: 100 } },
 );
 ```
 ### 8.fees field ko rename krke totalfees krdo 
