@@ -1,5 +1,5 @@
 # jsonSchema validation 
-``sql
+```sql
 use wecodeacademy
 ```
 ```sql
