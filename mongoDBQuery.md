@@ -113,7 +113,7 @@ db.books.updateOne(
 
 ### 8. Write an update query to add a new field "genre" with the value "Fiction" to all documents in the "books" collection.
 ```sql
-db.books.updateMany({},{$set:{"genre":"Fiction}})
+db.books.updateMany({},{$set:{"genre":"Fiction"}})
 ```
 
 ### 9. Write a query to find documents in the "books" collection where the genre is "Fiction".
