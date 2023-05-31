@@ -60,7 +60,7 @@ marks:{
 # Query 
 ### 1. Create a collection named "books" in MongoDB.
 ```sql
-db.createCollection("books)
+db.createCollection("books")
 ```
 
 ### 2. Insert a document into the "books" collection with the following details:
