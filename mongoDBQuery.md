@@ -8,7 +8,7 @@ db.createCollection("students", {
 $jsonSchema: {
  bsonType: "object",
  
- required: [ "name" , "fatherName", "motherName", "DOB" ,  "emailid" ,"mobile","address","batchName","fees","marks" ],
+ required: [ "name" , "fatherName", , "DOB" ,  "emailid" ,"mobile","batchName","fees","marks" ],
  properties: {
  name: {
  bsonType: "string",
