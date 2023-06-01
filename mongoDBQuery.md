@@ -224,11 +224,7 @@ db.books.find({ Title: /s$/ })
 db.books.find( { Author: { $nin: [ "Stephen King", "Agatha Christie" ] } } )
 ```
 ### 30. Write an update query to set the "year" field to 2022 for the document with the highest year in the "books" collection.
-```s ql
-db.books.updateOne(
-  { },
-  { $set: { "Year": 2022 } },
-  { sort: { "Year": -1 }}
-)
+```sql
+
 ```
 
